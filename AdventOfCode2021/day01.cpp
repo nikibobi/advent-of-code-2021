@@ -23,7 +23,8 @@ int main()
 	vector<int> sums;
 	for (auto it = cbegin(depths); it != cend(depths) - window_size + 1; ++it)
 	{
-		sums.emplace_back(accumulate(it, it + window_size, 0));
+		int sum = accumulate(it, it + window_size, 0);
+		sums.push_back(sum);
 	}
 
 	vector<int> differences;
