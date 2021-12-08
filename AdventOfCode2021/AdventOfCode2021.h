@@ -3,6 +3,7 @@
 
 #pragma once
 
+#include <algorithm>
 #include <iostream>
-
-// TODO: Reference additional headers your program requires here.
+#include <vector>
+#include <numeric>
