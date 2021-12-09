@@ -12,12 +12,13 @@ using std::unordered_map;
 
 int distance = 0;
 int depth = 0;
+int aim = 0;
 
 const unordered_map<string_view, function<void(int)>> command_map
 {
-	{ "forward", [](int amount) { distance += amount; } },
-	{ "up", [](int amount) { depth -= amount; } },
-	{ "down", [](int amount) { depth += amount; } },
+	{ "forward", [](int amount) { distance += amount; depth += aim * amount; } },
+	{ "up", [](int amount) { aim -= amount; } },
+	{ "down", [](int amount) { aim += amount; } },
 };
 
 int main()
