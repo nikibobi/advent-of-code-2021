@@ -4,6 +4,11 @@
 #pragma once
 
 #include <algorithm>
+#include <functional>
 #include <iostream>
-#include <vector>
 #include <numeric>
+#include <sstream>
+#include <string_view>
+#include <string>
+#include <unordered_map>
+#include <vector>
