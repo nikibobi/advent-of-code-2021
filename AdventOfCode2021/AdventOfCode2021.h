@@ -4,9 +4,11 @@
 #pragma once
 
 #include <algorithm>
+#include <bitset>
 #include <functional>
 #include <iostream>
 #include <numeric>
+#include <ranges>
 #include <sstream>
 #include <string_view>
 #include <string>
