@@ -1,16 +1,19 @@
-﻿// AdventOfCode2021.h : Include file for standard system include files,
-// or project specific include files.
-
-#pragma once
+﻿#pragma once
 
 #include <algorithm>
 #include <bitset>
+#include <chrono>
+#include <execution>
 #include <functional>
 #include <iostream>
+#include <iterator>
 #include <numeric>
+#include <optional>
 #include <ranges>
 #include <sstream>
 #include <string_view>
 #include <string>
+#include <tuple>
 #include <unordered_map>
+#include <unordered_set>
 #include <vector>
