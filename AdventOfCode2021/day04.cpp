@@ -127,6 +127,26 @@ optional<tuple<board_t, value_t>> part1(const vector<value_t>& numbers, vector<b
 	return std::nullopt;
 }
 
+optional<tuple<board_t, value_t>> part2(const vector<value_t>& numbers, vector<board_t> boards)
+{
+	optional<tuple<board_t, value_t>> result = std::nullopt;
+	for (value_t number : numbers)
+	{
+		for (board_t& board : boards)
+		{
+			board.mark(number);
+		}
+
+		auto is_bingo = [](const board_t& board) { return board.is_bingo(); };
+		if (auto it = find_if(boards.rbegin(), boards.rend(), is_bingo); it != boards.rend())
+		{
+			result = make_tuple(*it, number);
+			boards.erase(remove_if(boards.begin(), boards.end(), is_bingo), boards.end());
+		}
+	}
+	return result;
+}
+
 void write_result(const optional<tuple<board_t, value_t>>& result)
 {
 	if (result.has_value())
@@ -143,6 +163,9 @@ int main()
 
 	auto result1 = part1(numbers, boards);
 	write_result(result1);
+
+	auto result2 = part2(numbers, boards);
+	write_result(result2);
 
 	return 0;
 }
