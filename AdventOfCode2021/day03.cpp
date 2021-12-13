@@ -4,13 +4,13 @@ using std::bitset;
 using std::cin;
 using std::cout;
 using std::endl;
+using std::function;
 using std::getline;
+using std::ranges::count_if;
+using std::ranges::remove_if;
 using std::size_t;
 using std::string;
 using std::vector;
-using std::function;
-using std::ranges::count_if;
-using std::ranges::remove_if;
 using bit_criteria_t = function<bool(int, int)>;
 
 const size_t N{12};
