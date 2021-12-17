@@ -4,7 +4,7 @@ project ("AdventOfCode2021")
 
 set(CMAKE_CXX_STANDARD 20)
 
-foreach(DAY RANGE 1 5)
+foreach(DAY RANGE 1 6)
 	if(DAY LESS 10)
 		string(PREPEND DAY "0")
 	endif()
