@@ -22,7 +22,12 @@ using std::string;
 using std::transform_reduce;
 using std::vector;
 
-function<int(int)> distance_to_fuel = identity{};
+function<int(int)> distance_to_fuel = [](int distance)
+{
+	vector<int> steps(distance);
+	iota(begin(steps), end(steps), 1);
+	return accumulate(cbegin(steps), cend(steps), 0);
+};
 
 int main()
 {
